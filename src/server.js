@@ -3,7 +3,7 @@ import express from "express";
 import fileUpload from "express-fileupload";
 import fs from "fs";
 import {join} from "path";
-import { BranchRouter, StaffRouter, TransportRouter } from "./routers/index.js";
+import { AdminRouter, BranchRouter, StaffRouter, TransportRouter } from "./routers/index.js";
 config();
 
 const app = express();
@@ -13,6 +13,7 @@ app.use(fileUpload())
 app.use(StaffRouter)
 app.use(BranchRouter)
 app.use(TransportRouter)
+app.use(AdminRouter)
 
 
 app.use((error, req, res, next) => {

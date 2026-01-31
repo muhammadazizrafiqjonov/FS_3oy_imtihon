@@ -21,7 +21,8 @@ create table staffs(
     username varchar(50),
     password varchar(50),
     birthdate DATE,
-    gender VARCHAR(10)
+    gender VARCHAR(10),
+    role varchar(15)
 );
 
 create table adminPermissions(
